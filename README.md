@@ -1,8 +1,3 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
-
-## Giải thích các chủ đề nâng cao trong Minio (Versioning, Tag, Lifecycle, Permission, Multipart, Di chuyển dữ liệu, Public/Private Bucket)
-
-
 ***
 
 ### 1. **Versioning**

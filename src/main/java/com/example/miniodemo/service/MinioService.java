@@ -70,7 +70,6 @@ public class MinioService {
     public FileInfo uploadFile(MultipartFile file) {
         try {
             String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
-            
             minioClient.putObject(
                     PutObjectArgs.builder()
                             .bucket(bucketName)

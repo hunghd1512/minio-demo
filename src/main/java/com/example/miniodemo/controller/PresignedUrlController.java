@@ -14,7 +14,7 @@ public class PresignedUrlController {
     private final PresignedUrlService presignedUrlService;
 
     /**
-     * Generates a presigned URL for uploading an object.
+     * Generates a presigned URL for uploading an object not through server backend !.
      *
      * @param objectName The name of the object to upload
      * @param expiryTime The time in minutes after which the URL will expire (default: 10 minutes)
@@ -39,6 +39,10 @@ public class PresignedUrlController {
             return ResponseEntity.internalServerError().build();
         }
     }
+
+
+
+
 
     /**
      * Generates a presigned URL for downloading an object.
@@ -66,4 +70,17 @@ public class PresignedUrlController {
             return ResponseEntity.internalServerError().build();
         }
     }
+
+
+    //    c1: Với GET
+//    tạo url preview cho user , bản chất tạo mã hóa url private , chỉ truy cập dc trong 1 time nhất định
+//    c2: Với PUT
+//    dùng url trả ra đưa frond-end gọi push lên , ưu điểm: nhanh , giảm tải cho back-end , co hiệu lực
+//    fetch(uploadUrl, {
+//        method: "PUT",
+//                body: file,
+//                headers: {
+//            "Content-Type": file.type
+//        }
+//    });
 }
